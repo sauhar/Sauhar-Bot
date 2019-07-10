@@ -7,6 +7,18 @@ bot.on('ready',() =>{
     console.log("This bot is online!")
 })
 bot.on('message',(message)=>{
+    //getting message from client
+    if (message.author.bot) return; //stopping bot to respond to its message
+    //checking any mention in message
+    let check = message.mentions.users.first();
+    console.log("check"+check);
+    if (typeof check !== 'undefined'){
+        sauharBotReply(message);
+    }
+    
+});
+
+function sauharBotReply(message){
     var mentionedUserId = message.mentions.users.first().id;
     if (mentionedUserId == 460412608844005396) {
 
@@ -25,7 +37,9 @@ bot.on('message',(message)=>{
             .catch(console.error);
 
     }
-})
+
+}
+    
 
 
 bot.login(process.env.BOT_TOKEN);
