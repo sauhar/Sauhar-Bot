@@ -28,7 +28,7 @@ function sauharBotReply(message){
             //reading json file
 
             console.log("pubg text found in message");
-            reply = ' :wave: Hi this is me Sauhar Bot. Your message has been send to Lapzap, wait for reply. Have nice day';
+            reply = ' :wave: Hi this is me Sauhar Bot. Your message has been send to Sauhar, wait for reply. Have nice day';
         } else {
             reply = "Hi this is me Sauhar Bot.Please leave your message";
         }
